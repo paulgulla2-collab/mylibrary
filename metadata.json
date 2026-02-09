@@ -1,0 +1,7 @@
+{
+  "name": "PDF Cosmos",
+  "description": "A spatial 3D document explorer where your PDFs become physical objects in a virtual world. Import, preview, and organize your digital library with a tactile feel.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
