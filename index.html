@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PDF Cosmos</title>
+    <title>PDF Cosmos | Spatial Library</title>
+    <!-- 使用適當的圖標 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -11,21 +13,31 @@
         font-family: 'Inter', sans-serif;
         margin: 0;
         overflow: hidden;
-        background: #0a0a0a;
+        background: #050505;
       }
       canvas {
         display: block;
       }
-      /* 初始加載提示，防止黑屏感 */
       #root:empty::before {
-        content: 'Initializing PDF Cosmos...';
+        content: '🌌 Opening the Cosmos...';
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: #444;
-        font-size: 1rem;
-        letter-spacing: 0.1em;
+        color: #666;
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
       }
     </style>
     <script type="importmap">
@@ -43,7 +55,7 @@
   }
 }
 </script>
-    <script type="module" src="index.tsx"></script>
+    <!-- 注意：不要在這裡手動加入 index.tsx 的 script 標籤，系統會自動處理 -->
   </head>
   <body>
     <div id="root"></div>
